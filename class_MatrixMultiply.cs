@@ -1,46 +1,47 @@
 using System;
 
-class MatrixMultiply 
-{ 
-    static void Main(string[] args) 
-    { 
-        int[,] a = new int [2,2]; 
-        int[,] b = new int [2,2]; 
- 
-        Console.Write("Enter four nubers to first matrix:\n"); 
-         
-        for (int i = 0;  i < a.GetLength(0); i++) 
-        { 
-            for (int j = 0; j < a.GetLength(1); j++) 
-            { 
-                a[i, j] = int.Parse(Console.ReadLine()); 
-            } 
-        } 
- 
-        Console.Write("\n"); 
- 
-        Console.Write("Enter four nubers to second matrix:\n"); 
- 
-        for (int i = 0; i < b.GetLength(0); i++) 
-        { 
-            for (int j = 0; j < b.GetLength(1); j++) 
-            { 
-                b[i, j] = int.Parse(Console.ReadLine()); 
-            } 
-        } 
- 
-        int[,] result = Multiplication.c(a, b); 
- 
-        Console.Write("\n"); 
- 
-        Console.WriteLine("Result is:"); 
- 
-        for (int i = 0; i < result.GetLength(0); i++) 
-        { 
-            for (int j = 0;j < result.GetLength(1); j++) 
-            { 
-                Console.Write("{0} ", result[i, j]); 
-            } 
-            Console.Write("\n"); 
-        } 
-    } 
+class MatrixMultiply
+{
+    static void Main(string[] args)
+    {
+        int[,] a = new int[2, 2];
+        int[,] b = new int[2, 2];
+
+        Console.Write("Enter four nubers to first matrix:\n");
+
+        for (int i = 0; i < a.GetLength(0); i++)
+        {
+            for (int j = 0; j < a.GetLength(1); j++)
+            {
+                a[i, j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        Console.Write("\n");
+
+        Console.Write("Enter four nubers to second matrix:\n");
+
+        for (int i = 0; i < b.GetLength(0); i++)
+        {
+            for (int j = 0; j < b.GetLength(1); j++)
+            {
+                b[i, j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        int[,] result = Multiplication.c(a, b);
+
+        Console.Write("\n");
+
+        Console.WriteLine("Result is:");
+
+        for (int i = 0; i < result.GetLength(0); i++)
+        {
+            for (int j = 0; j < result.GetLength(1); j++)
+            {
+                Console.Write("{0} ", result[i, j]);
+            }
+            Console.Write("\n");
+        }
+    }
+}
